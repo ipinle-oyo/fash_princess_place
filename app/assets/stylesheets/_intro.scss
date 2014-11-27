@@ -1,15 +1,14 @@
 
-
 .intro {
     overflow: hidden;
     display: block;
     width: 100%;
-    height: 60%;
+    height: 100%;
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(beauty.JPG) no-repeat bottom center scroll;
-    background-color: #000;
+    background: url(hug.jpg) no-repeat bottom center scroll;
+    background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -29,14 +28,24 @@
     font-size: 40px;
 }
 
-.intro .intro-body .intro-text {
+.intro .intro-body{
     font-size: 18px;
+}
+.intro-text{
+    width: 15em;
+    font-size: 1px;
+    background-color: rgba(255,255,255,0.8);
+    color: black;
+    padding: 10px;
+    font-size: 15px;
+    margin: 15em 20em;
+
 }
 
 @media(max-width:767px) {
     .intro {
     width: 100%;
-    height: 60%;
+    height: 100%;
     padding: 100px 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -50,15 +59,20 @@
         font-size: 100px;
     }
 
-    .intro .intro-body .intro-text {
+    .intro .intro-body {
         font-size: 25px;
+    }
+    .intro-text {
+        padding: 10px;
+        font-size: 13px;
+        margin: 12em 20em;
     }
 }
 
 @media(max-width:640px) {
     .intro {
     width: 100%;
-    height: 50%;
+    height: 100%;
     padding: 100px 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -72,15 +86,20 @@
         font-size: 100px;
     }
 
-    .intro .intro-body .intro-text {
+    .intro .intro-body {
         font-size: 25px;
+    }
+    .intro-text {
+        padding: 10px;
+        font-size: 13px;
+        margin: 12em 17em;
     }
 }
 
 @media(max-width:480px) {
     .intro {
     width: 100%;
-    height: 50%;
+    height: 100%;
     padding: 100px 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -92,17 +111,24 @@
 
     .intro .intro-body .brand-heading {
         font-size: 100px;
+
     }
 
-    .intro .intro-body .intro-text {
+    .intro .intro-body {
         font-size: 25px;
+
+    }
+    .intro-text {
+        padding: 10px;
+        font-size: 13px;
+        margin: 12em 10em;
     }
 }
 
 @media(max-width:200px) {
     .intro {
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 0px 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -116,8 +142,13 @@
         font-size: 100px;
     }
 
-    .intro .intro-body .intro-text {
+    .intro .intro-body {
         font-size: 25px;
+    }
+    .intro-text {
+        padding: 4px;
+        font-size: 7px;
+        margin: 13em 5em;
     }
 }
 

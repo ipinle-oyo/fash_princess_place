@@ -1,0 +1,2 @@
+module MenStoresHelper
+end

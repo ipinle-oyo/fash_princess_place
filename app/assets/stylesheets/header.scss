@@ -9,6 +9,7 @@
 .navbar-custom .navbar-brand {
     font-weight: 700;
     font-size: 20px;
+    width: auto;
 }
 
 .navbar-custom .navbar-brand:focus {
@@ -47,6 +48,14 @@
     outline: 0;
     background-color: rgba(255,255,255,.3);
 }
+#button-bars{
+    font-size: 10px;
+}
+#button-search{
+    font-size: 10px;
+    margin-right: 5px;
+}
+.navbar-toggle{margin-top: 3px;}
 
 @media(min-width:767px) {
     .navbar {
@@ -99,6 +108,6 @@
         letter-spacing: 1px;
     }
     .navbar-custom .navbar-brand {
-    font-size: 10px;
+    font-size: 9px;
 }
 }

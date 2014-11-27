@@ -9,7 +9,7 @@ body {
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
-    background-color: #000;
+    background-color: #fff;
 }
 
 html {
@@ -57,37 +57,13 @@ a:focus {
     color: #11505d;
 }
 // aside and main
-aside{
-    // max-width: 15%;
-    // min-width: 15%;
-    text-align: center;
-    background-color: pink;
-    // float: left;
-    }
-#main{
-    // max-width: 85%;
-    // min-width: 85%;
-    background-color: red;
-    // float: right;
-    }
 
 .light {
     font-weight: 400;
 }
 
-
-.filter-header{
-display: inline-block;
-
-ul{
-}
-}
-#button-women{
-    // li{margin: 0 0px; text-decoration: none; color:red; display: inline-block;}
-}
-
 .content-section {
-    padding-top: 100px;
+    padding-top: 0px;
 }
 #contact{padding: 100px 0px 0px 0px;}
 
@@ -111,7 +87,7 @@ ul{
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 0px;
     }
 
     .download-section {

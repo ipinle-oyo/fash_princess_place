@@ -1,0 +1,247 @@
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "men_stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "image" varchar(255), "item_name" varchar(255)) [0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "pages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "women_stores" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "item_name" varchar(255), "image" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141127000001')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141123184323')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141126225902')
+  [1m[36m (1.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141126230021')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141126230138')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "men_stores"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "men_stores" ("created_at", "updated_at", "id") VALUES ('2014-11-27 02:00:20', '2014-11-27 02:00:20', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "men_stores" ("created_at", "updated_at", "id") VALUES ('2014-11-27 02:00:20', '2014-11-27 02:00:20', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pages"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pages" ("created_at", "updated_at", "id") VALUES ('2014-11-27 02:00:20', '2014-11-27 02:00:20', 980190962)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pages" ("created_at", "updated_at", "id") VALUES ('2014-11-27 02:00:20', '2014-11-27 02:00:20', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "women_stores"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "women_stores" ("item_name", "image", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2014-11-27 02:00:20', '2014-11-27 02:00:20', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "women_stores" ("item_name", "image", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2014-11-27 02:00:20', '2014-11-27 02:00:20', 298486374)[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+PagesControllerTest: test_should_create_page
+--------------------------------------------
+  [1m[35mPage Load (0.3ms)[0m  SELECT  "pages".* FROM "pages"  WHERE "pages"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pages"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+PagesControllerTest: test_should_destroy_page
+---------------------------------------------
+  [1m[35mPage Load (0.1ms)[0m  SELECT  "pages".* FROM "pages"  WHERE "pages"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "pages"[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+PagesControllerTest: test_should_get_edit
+-----------------------------------------
+  [1m[35mPage Load (0.1ms)[0m  SELECT  "pages".* FROM "pages"  WHERE "pages"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+PagesControllerTest: test_should_get_index
+------------------------------------------
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT  "pages".* FROM "pages"  WHERE "pages"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by PagesController#index as HTML
+  Rendered pages/_intro.html.erb (0.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 7701ms (Views: 7700.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+PagesControllerTest: test_should_get_new
+----------------------------------------
+  [1m[35mPage Load (0.1ms)[0m  SELECT  "pages".* FROM "pages"  WHERE "pages"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------
+PagesControllerTest: test_should_show_page
+------------------------------------------
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT  "pages".* FROM "pages"  WHERE "pages"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+PagesControllerTest: test_should_update_page
+--------------------------------------------
+  [1m[35mPage Load (0.1ms)[0m  SELECT  "pages".* FROM "pages"  WHERE "pages"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------
+WomenStoresControllerTest: test_should_create_women_store
+---------------------------------------------------------
+  [1m[36mWomenStore Load (0.2ms)[0m  [1mSELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "women_stores"
+Processing by WomenStoresController#create as HTML
+  Parameters: {"women_store"=>{"image"=>"MyString", "item_name"=>"MyString"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "women_stores" ("created_at", "image", "item_name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-27 02:00:28.006273"], ["image", "MyString"], ["item_name", "MyString"], ["updated_at", "2014-11-27 02:00:28.006273"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/women_stores/980190963
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "women_stores"
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------
+WomenStoresControllerTest: test_should_destroy_women_store
+----------------------------------------------------------
+  [1m[36mWomenStore Load (0.1ms)[0m  [1mSELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "women_stores"
+Processing by WomenStoresController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mWomenStore Load (0.0ms)[0m  [1mSELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "women_stores" WHERE "women_stores"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/women_stores
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "women_stores"[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+WomenStoresControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35mWomenStore Load (0.1ms)[0m  SELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by WomenStoresController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mWomenStore Load (0.1ms)[0m  [1mSELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered women_stores/_form.html.erb (46.7ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 97ms (Views: 95.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+WomenStoresControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[35mWomenStore Load (0.1ms)[0m  SELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by WomenStoresController#index as HTML
+  [1m[36mWomenStore Load (0.2ms)[0m  [1mSELECT "women_stores".* FROM "women_stores"[0m
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+WomenStoresControllerTest: test_should_get_new
+----------------------------------------------
+  [1m[35mWomenStore Load (0.1ms)[0m  SELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by WomenStoresController#new as HTML
+  Rendered women_stores/_form.html.erb (2.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------
+WomenStoresControllerTest: test_should_show_women_store
+-------------------------------------------------------
+  [1m[36mWomenStore Load (0.1ms)[0m  [1mSELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by WomenStoresController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mWomenStore Load (0.0ms)[0m  SELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------
+WomenStoresControllerTest: test_should_update_women_store
+---------------------------------------------------------
+  [1m[36mWomenStore Load (0.1ms)[0m  [1mSELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by WomenStoresController#update as HTML
+  Parameters: {"women_store"=>{"image"=>"MyString", "item_name"=>"MyString"}, "id"=>"980190962"}
+  [1m[35mWomenStore Load (0.0ms)[0m  SELECT  "women_stores".* FROM "women_stores"  WHERE "women_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/women_stores/980190962
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------------
+MenStoresControllerTest: test_should_create_men_store
+-----------------------------------------------------
+  [1m[36mMenStore Load (0.2ms)[0m  [1mSELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "men_stores"
+Processing by MenStoresController#create as HTML
+  Parameters: {"men_store"=>{}}
+Completed 400 Bad Request in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------
+MenStoresControllerTest: test_should_destroy_men_store
+------------------------------------------------------
+  [1m[36mMenStore Load (0.1ms)[0m  [1mSELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "men_stores"
+Processing by MenStoresController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mMenStore Load (0.0ms)[0m  [1mSELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "men_stores" WHERE "men_stores"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/men_stores
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "men_stores"[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+MenStoresControllerTest: test_should_get_edit
+---------------------------------------------
+  [1m[35mMenStore Load (0.1ms)[0m  SELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by MenStoresController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mMenStore Load (0.0ms)[0m  [1mSELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+  Rendered men_stores/_form.html.erb (3.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------
+MenStoresControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[35mMenStore Load (0.1ms)[0m  SELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by MenStoresController#index as HTML
+  [1m[36mMenStore Load (0.1ms)[0m  [1mSELECT "men_stores".* FROM "men_stores"  WHERE (item_name LIKE :query OR image LIKE :query)[0m
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+MenStoresControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[35mMenStore Load (0.1ms)[0m  SELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+Processing by MenStoresController#new as HTML
+  Rendered men_stores/_form.html.erb (1.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------
+MenStoresControllerTest: test_should_show_men_store
+---------------------------------------------------
+  [1m[36mMenStore Load (0.1ms)[0m  [1mSELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MenStoresController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mMenStore Load (0.0ms)[0m  SELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------
+MenStoresControllerTest: test_should_update_men_store
+-----------------------------------------------------
+  [1m[36mMenStore Load (0.1ms)[0m  [1mSELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1[0m  [["id", 980190962]]
+Processing by MenStoresController#update as HTML
+  Parameters: {"men_store"=>{}, "id"=>"980190962"}
+  [1m[35mMenStore Load (0.0ms)[0m  SELECT  "men_stores".* FROM "men_stores"  WHERE "men_stores"."id" = ? LIMIT 1  [["id", 980190962]]
+Completed 400 Bad Request in 1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

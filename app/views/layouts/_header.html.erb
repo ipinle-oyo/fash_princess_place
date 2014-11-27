@@ -3,7 +3,8 @@
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
+                    <i class="fa fa-search" id='button-search'>∆</i>
+                    <i class="fa fa-bars" id='button-bars'>∫</i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
                     </i>  <span class="light">†</span> Princess Place
@@ -17,15 +18,23 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <!-- <li>
-                        <a class="page-scroll" href="#watch">Watches</a>
-                    </li> -->
-                    <li>
-                        <a class="page-scroll" href="#contact">Stores</a>
+                    <li >
+                    <%= link_to 'MEN', men_stores_path, :class=>'filter-header-link', :id=>'button_men' %>
                     </li>
-                    <!-- <li>
+                    <li>
+                    <%= link_to 'WOMEN', women_stores_path, :class=>'filter-header-link', :id=>'button_men'%>
+                    </li>
+                    <li>
+                    <%= link_to 'TEENS', :class=>'filter-header-link', :id=>'button_men'%>
+                    </li><li>
+                    <%= link_to 'KIDS', :class=>'filter-header-link', :id=>'button_men'%>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Boutique</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#download">About</a>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

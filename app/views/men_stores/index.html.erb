@@ -1,0 +1,22 @@
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+<section id="watch" class="container content-section text-center">
+  <%= form_tag "/men_stores", method: "GET" do %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Submit" %>
+  <% end %>
+  <div class="watch-section">
+    <div class="container">
+      <% @men_stores.each do |s| %>
+        <p>
+          <h3><%= s.item_name %></h3>
+          <br /><%= image_tag s.image %>
+        </p>
+      <% end %>
+    </div>
+   </div> 
+</section>

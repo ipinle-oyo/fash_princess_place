@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  resources :women_stores
+
+  resources :men_stores
+
   resources :pages
   root 'pages#index'
+
+  get 'men_stores/new' => 'men_stores#new' 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

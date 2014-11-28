@@ -9,18 +9,28 @@
     <%= text_field_tag :q, params[:q] %>
     <%= submit_tag "Submit" %>
   <% end %>
-  <div class="watch-section">
+  <!-- <div class="watch-section">
     <div class="container">
       <div clas="row">
-      <% @kids_stores.each do |kids_store| %>
+      <%# @kids_stores.each do |kids_store| %>
         <div class="col-lg-4 col-sm-6 col-md-6">
           <p>
-            <%= image_tag kids_store.image, :alt=>'rss feed' %><br>
-            <%= kids_store.item_name %>
+            <%# image_tag kids_store.image, :alt=>'rss feed' %><br>
+            <%# kids_store.item_name %>
           </p>
         </div>
-        <% end %>
+        <%# end %>
       </div>
     </div>
-   </div> 
+   </div>  -->
+   <div class="watch-section">
+    <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 col-md-6"><%= image_tag("https://s3-us-west-2.amazonaws.com/fashion-store/kid_bag.jpg", :alt => "rss feed") %><br><%= 'seamaster 300'.upcase %></div>
+      <div class="col-lg-6 col-sm-12 col-md-6"><%= image_tag("https://s3-us-west-2.amazonaws.com/fashion-store/kid_christmas.jpg", :alt => "rss feed") %><br><%= 'constellation'.upcase %></div>
+      <div class="col-lg-6 col-sm-12 col-md-6"><%= image_tag("https://s3-us-west-2.amazonaws.com/fashion-store/kid_paint.jpeg", :alt => "rss feed") %><br><%= 'seamaster 300'.upcase %></div>
+      <div class="col-lg-6 col-sm-12 col-md-6"><%= image_tag("https://s3-us-west-2.amazonaws.com/fashion-store/kid_short.jpeg", :alt => "rss feed") %><br><%= 'constellation'.upcase %></div>
+    </div>
+    <hr>
+  </div>
 </section>

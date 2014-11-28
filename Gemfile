@@ -9,6 +9,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
+gem 'carrierwave'
+gem 'rmagick', '2.13.2'
+gem 'rails_admin', '~> 0.6.5'
+
 group :doc do
 	gem 'sdoc', '~> 0.4.0'
 end

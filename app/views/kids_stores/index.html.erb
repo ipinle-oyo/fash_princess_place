@@ -1,0 +1,26 @@
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+  <section id="watch" class="container content-section text-center">
+  <%= form_tag "/kids_stores", method: "GET" do %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Submit" %>
+  <% end %>
+  <div class="watch-section">
+    <div class="container">
+      <div clas="row">
+      <% @kids_stores.each do |kids_store| %>
+        <div class="col-lg-4 col-sm-6 col-md-6">
+          <p>
+            <%= image_tag kids_store.image, :alt=>'rss feed' %><br>
+            <%= kids_store.item_name %>
+          </p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+   </div> 
+</section>

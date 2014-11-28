@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :kids_stores
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :women_stores
 
   resources :men_stores

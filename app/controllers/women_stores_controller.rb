@@ -4,7 +4,7 @@ class WomenStoresController < ApplicationController
   # GET /women_stores
   # GET /women_stores.json
   def index
-    @women_stores = WomenStore.all
+    @women_stores = WomenStore.search_for(params[:q]).order("created_at DESC")
   end
 
   # GET /women_stores/1
